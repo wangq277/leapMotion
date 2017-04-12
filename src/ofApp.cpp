@@ -170,26 +170,25 @@ bool simpleGesture::track (ofPoint iPt) {
     if (absNext.x > iPt.x)
         
       xMatch = true;
-//          ofDrawCircle(absNext.x,absNext.y , 80);
+          ofDrawCircle(absNext.x,absNext.y , 80);
   }
   
   if (gPoints[curIdx-1].y < gPoints[curIdx].y) {  // going down
     if (absNext.y < iPt.y) 			// have we exceeded that y?
       yMatch = true;
      
-//      ofSetColor(ofRandom(255), ofRandom(255), ofRandom(255));
-//      ofFill();
-//       ofDrawCircle(absNext.x, absNext.y, 20);
-//      for(int i = 0; i<20;i ++){
-//      ofDrawRectangle(absNext.x+200*i, absNext.y+200*i, 30, 25);
-//      }
+      ofSetColor(ofRandom(255), ofRandom(255), ofRandom(255));
+      ofFill();
+       ofDrawCircle(absNext.x, absNext.y, 20);
+      for(int i = 0; i<20;i ++){
+      ofDrawRectangle(absNext.x+200*i, absNext.y+200*i, 30, 25);
+      }
   } else {					// going up
     if (absNext.y > iPt.y)
       yMatch = true;
-//       ofSetColor(ofRandom(255), ofRandom(255), ofRandom(255));
-//      ofDrawCircle(absNext.x, absNext.y, 20);
       
- 
+      ofSetColor(ofRandom(255), ofRandom(255), ofRandom(255));
+      ofDrawCircle(absNext.x, absNext.y, 20);
   }
   
   // if we have x & y
